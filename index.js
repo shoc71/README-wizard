@@ -2,12 +2,12 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-// user_input
+// user_input prompted by CLI
 const questions = [
     {
         type: 'input',
         name: 'username',
-        memo: "What's your username?",
+        message: "What's your username?",
     },
     {
         type: 'input',
@@ -17,7 +17,7 @@ const questions = [
     {
         type: 'input',
         name: 'title',
-        memo: "What's the title of the project?",
+        message: "What's the title of the project?",
     },
     {
         type: 'input',
@@ -40,11 +40,19 @@ const questions = [
         message: 'What are the contribution guidelines?',
     },
     {
-        type: 'input',
+        type: 'list',
         name: 'license',
-        message: 'What is the license for your project?',
+        message: 'Select the license for this project',
+        choices: [
+            'MIT',
+            'Apache 2.0',
+            'GPL 3.0',
+            'BSD 3-Clause',
+            'None',
+        ],
     },
 ];
+
 
 // Function to write README file
 function writeToFile(fileName, data) {
@@ -69,11 +77,11 @@ written by ${answers.username}
 ${answers.description}
 
 ## Table of Contents
-[Description](#Description)
-[Installation](#Installation)
-[Usage](#Usage)
-[Contribution](#Contribution)
-[Questions](#Questions)
+- [Description](#Description)
+- [Installation](#Installation)
+- [Usage](#Usage)
+- [Contribution](#Contribution)
+- [Questions](#Questions)
 
 ## Installation
 ${answers.installation}
@@ -85,10 +93,10 @@ ${answers.usage}
 ${answers.contribution}
 
 ## License
-${answers.license}
+This project is licensed under the ${answers.license} License.
 
 ## Questions
-For any questions or concerns, please email ${answers.email}. I will get back to shortly.
+For any questions or concerns, please email ${answers.email}.
 `; writeToFile('README.md', readmeContent); })
 .catch((err) => {
     if (err.isTtyError) {
