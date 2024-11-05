@@ -35,8 +35,4 @@ This project is licensed under the BSD 3-Clause License.
 ## Questions
 For any questions or concerns, please email supersonicwind6@gmail.com
 
-Follow this video link, to understand how the program works.
-https://youtu.be/y_754G2fuW4
-
 Github repo link; https://github.com/shoc71/README-wizard
-
