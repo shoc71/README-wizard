@@ -1,26 +1,26 @@
-# README GREATER MAKER
+# Automobile-Creation-Operation
 written by shoc71
-
+git 
 ## Description
-This is a README generator. Created and Edited by shoc71, post production.
+A Command-Line Terminal based program that allows a user to either create a new vechile from scartch and/or modify the actions of the pre-existing vechile and store all the data. Re-runs for the vechiles are possible and previous data entred before will be safe.
+
+Program is written using Javascript and Typescript(5.4.5).
 
 ## Table of Contents
-- [Description](#Description)
-- [Installation](#Installation)
-- [Usage](#Usage)
-- [Contribution](#Contribution)
-- [Questions](#Questions)
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contribution](#contribution)
+- [Questions](#questions)
 
 ## Installation
-1. Open up terminal
-2. install npm and node packages
-3. ```git clone git@github.com:shoc71/README-wizard.git```
-3. ```npm i ```
-4. ```node --version```
-5. ```npm install inquirer@8.2.4```
+1. Open up terminal (more specifically [bash](https://www.youtube.com/watch?v=3eu67g3PTdk))
+2. Install ```npm``` and ```node``` packages on your desktop
+3. Type the following command: ```git clone git@github.com:shoc71/Automobile-Creation-Operation.git```
+4. Type the following command: ```npm i ``` 
 
 ## Usage
-refer to the section above, otherwise type up in the CLI, navigate to the code's location using the "cd" command and finally run node index.js as such.
+After competing the installion instructions type up in the CLI, navigate to the code's location using the "cd" command and finally run node index.js as such.
 
 ```~/where-you-stored-the-code$ node index.js```
 
@@ -30,9 +30,8 @@ Fork repo, make changes, and request a merge.
 If you idenitfy any security or performance issues or any major improvements, raise an issue and let the community know.
 
 ## License
-This project is licensed under the BSD 3-Clause License.
+This project is licensed under the [![License](https://opensource.org/licenses/Apache-2.0)](https://opensource.org/licenses/Apache-2.0).
 
 ## Questions
-For any questions or concerns, please email supersonicwind6@gmail.com
+For any questions or concerns, please email mrdrlogic@gmail.com. Or [GitHub Profile](https://github.com/shoc71)
 
-Github repo link; https://github.com/shoc71/README-wizard

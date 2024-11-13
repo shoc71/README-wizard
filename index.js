@@ -2,6 +2,28 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
+// License link mapping
+const licenseLinks = {
+    'Apache 2.0': 'https://opensource.org/licenses/Apache-2.0',
+    'Boost': 'https://opensource.org/licenses/Boost-1.0',
+    'BSD 2-Clause': 'https://opensource.org/licenses/BSD-2-Clause',
+    'BSD 3-Clause': 'https://opensource.org/licenses/BSD-3-Clause',
+    'Creative Commons': 'https://creativecommons.org/licenses/',
+    'Eclipse': 'https://opensource.org/licenses/EPL-1.0',
+    'GNU': 'https://www.gnu.org/licenses/',
+    'GPL 3.0': 'https://opensource.org/licenses/GPL-3.0',
+    'IBM': 'https://opensource.org/licenses/IBM',
+    'MIT': 'https://opensource.org/licenses/MIT',
+    'Mozilla': 'https://opensource.org/licenses/MPL-2.0',
+    'Open Data Commons': 'https://opendatacommons.org/licenses/',
+    'Perl': 'https://opensource.org/licenses/Artistic-2.0',
+    'SIL': 'https://opensource.org/licenses/SIL-OFL-1.1',
+    'Unlicense': 'http://unlicense.org/',
+    'WTFPL': 'http://www.wtfpl.net/',
+    'Zlib': 'https://opensource.org/licenses/Zlib',
+    'None': '',
+};
+
 // user_input prompted by CLI
 const questions = [
     {
@@ -44,10 +66,23 @@ const questions = [
         name: 'license',
         message: 'Select the license for this project',
         choices: [
-            'MIT',
             'Apache 2.0',
-            'GPL 3.0',
+            'Boost',
+            'BSD 2-Clause',
             'BSD 3-Clause',
+            'Creative Commons',
+            'Eclipse',
+            'GNU',
+            'GPL 3.0',
+            'IBM',
+            'MIT',
+            'Mozilla',
+            'Open Data Commons',
+            'Perl',
+            'SIL',
+            'Unlicense',
+            'WTFPL',
+            "Zlib",
             'None',
         ],
     },
@@ -70,18 +105,22 @@ const print = (string) => {console.log(`${string}`)}
 // Function to initialize the app
 function main() {
     inquirer.prompt(questions).then((answers) => {
-    const readmeContent = `# ${answers.title}
+
+        const licenseLink = answers.license !== "None" ?
+            `[![License](${licenseLinks[answers.license]})](${licenseLinks[answers.license]})` : '';
+
+        const readmeContent = `# ${answers.title}
 written by ${answers.username}
 
 ## Description
 ${answers.description}
 
 ## Table of Contents
-- [Description](#Description)
-- [Installation](#Installation)
-- [Usage](#Usage)
-- [Contribution](#Contribution)
-- [Questions](#Questions)
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contribution](#contribution)
+- [Questions](#questions)
 
 ## Installation
 ${answers.installation}
@@ -93,10 +132,11 @@ ${answers.usage}
 ${answers.contribution}
 
 ## License
-This project is licensed under the ${answers.license} License.
+This project is licensed under the ${licenseLink}.
 
 ## Questions
-For any questions or concerns, please email ${answers.email}.
+For any questions or concerns, please email ${answers.email}. Or [GitHub Profile](https://github.com/${answers.username})
+
 `; writeToFile('README.md', readmeContent); })
 .catch((err) => {
     if (err.isTtyError) {
