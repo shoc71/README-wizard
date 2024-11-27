@@ -135,7 +135,7 @@ ${answers.contribution}
 This project is licensed under the ${licenseLink}.
 
 ## Questions
-For any questions or concerns, please email ${answers.email}. Or [GitHub Profile](https://github.com/${answers.username})
+For any questions or concerns, please email ${answers.email} Or [GitHub Profile](https://github.com/${answers.username})
 
 `; writeToFile('README.md', readmeContent); })
 .catch((err) => {

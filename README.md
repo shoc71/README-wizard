@@ -1,10 +1,8 @@
-# Automobile-Creation-Operation
+# Anyone-Blog
 written by shoc71
-git 
-## Description
-A Command-Line Terminal based program that allows a user to either create a new vechile from scartch and/or modify the actions of the pre-existing vechile and store all the data. Re-runs for the vechiles are possible and previous data entred before will be safe.
 
-Program is written using Javascript and Typescript(5.4.5).
+## Description
+Full-stack Blogging website for anonymous users to post their thoughts about they want to with a title and description, all saved on the localstorage (temp) to showoff as a working model and hopefully display more when a working server is implemented.
 
 ## Table of Contents
 - [Description](#description)
@@ -14,15 +12,10 @@ Program is written using Javascript and Typescript(5.4.5).
 - [Questions](#questions)
 
 ## Installation
-1. Open up terminal (more specifically [bash](https://www.youtube.com/watch?v=3eu67g3PTdk))
-2. Install ```npm``` and ```node``` packages on your desktop
-3. Type the following command: ```git clone git@github.com:shoc71/Automobile-Creation-Operation.git```
-4. Type the following command: ```npm i ``` 
+Download the repository on to your local computer using the following [tutorial video](https://www.youtube.com/watch?v=eWiPHP0us_0).
 
 ## Usage
-After competing the installion instructions type up in the CLI, navigate to the code's location using the "cd" command and finally run node index.js as such.
-
-```~/where-you-stored-the-code$ node index.js```
+Click the link below to see how the website should look and feel.
 
 ## Contribution
 Fork repo, make changes, and request a merge.
