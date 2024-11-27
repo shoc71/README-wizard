@@ -135,7 +135,11 @@ ${answers.contribution}
 This project is licensed under the ${licenseLink}.
 
 ## Questions
-For any questions or concerns, please email ${answers.email} Or [GitHub Profile](https://github.com/${answers.username})
+For any questions or concerns, please email ${answers.email}
+
+Youtube Tutorial: [Click Unlisted Video Here](#)
+Deployed Webpage: https://${answers.username}.github.io/${answers.title}/
+GitHub Profile: [${answers.username}](https://github.com/${answers.username})
 
 `; writeToFile('README.md', readmeContent); })
 .catch((err) => {
