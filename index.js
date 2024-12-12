@@ -110,7 +110,8 @@ function main() {
             `[![License](${licenseLinks[answers.license]})](${licenseLinks[answers.license]})` : '';
 
         const readmeContent = `# ${answers.title}
-written by ${answers.username}
+written by ${answers.username};
+Thanks to the following contributors []
 
 ## Description
 ${answers.description}
