@@ -122,15 +122,20 @@ ${answers.description}
 - [Usage](#usage)
 - [Contribution](#contribution)
 - [Questions](#questions)
+- [Links](#links)
 
 ## Installation
 ${answers.installation}
 
 ## Usage
 ${answers.usage}
+After competing the installion instructions type up in the CLI (terminal), navigate to the code's location using the "cd" command and finally run node index.js as such.
 
 ## Contribution
 ${answers.contribution}
+Fork repo, make changes, and request a merge.
+
+If you idenitfy any security or performance issues or any major improvements, raise an issue and let the community know.
 
 ## License
 This project is licensed under the ${licenseLink}.
@@ -138,9 +143,12 @@ This project is licensed under the ${licenseLink}.
 ## Questions
 For any questions or concerns, please email ${answers.email}
 
+## Links
 Youtube Tutorial: [Click Unlisted Video Here](#)
 
 Deployed Webpage: https://${answers.username}.github.io/${answers.title}/
+
+GitHub Repo: https://github.com/${answers.username}/${answers.title}/
 
 GitHub Profile: [${answers.username}](https://github.com/${answers.username})
 
