@@ -92,15 +92,15 @@ const questions = [
 // Function to write README file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) => {
-      if (err) {
-        return console.log(err);
-      }
-      console.log('README.md has been generated!');
+        if (err) {
+            return console.log(err);
+        }
+        console.log('README.md has been generated!');
     });
 };
 
 // Function simplifying console.log into a simple print statement
-const print = (string) => {console.log(`${string}`)}
+const print = (string) => { console.log(`${string}`) }
 
 // Function to initialize the app
 function main() {
@@ -152,14 +152,15 @@ GitHub Repo: https://github.com/${answers.username}/${answers.title}/
 
 GitHub Profile: [${answers.username}](https://github.com/${answers.username})
 
-`; writeToFile('README.md', readmeContent); })
-.catch((err) => {
-    if (err.isTtyError) {
-        print("Prompt couldn't be rendered because of an internal issue.")
-    } else {
-        print("Something else went wrong.")
-    }
-}); 
+`; writeToFile(`README_${answers.title}.md`, readmeContent);
+    })
+        .catch((err) => {
+            if (err.isTtyError) {
+                print("Prompt couldn't be rendered because of an internal issue.")
+            } else {
+                print("Something else went wrong.")
+            }
+        });
 }
 
 // Function call to initialize app init();
